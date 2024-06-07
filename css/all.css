@@ -1,0 +1,10 @@
+body {
+    font-family: "Manrope", sans-serif;
+}
+
+.menu li a{
+    font-weight: 700;
+}
+.menu li a:hover {
+    color: #FF4240;
+}

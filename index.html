@@ -1,0 +1,567 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CSS  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <!-- External CSS  -->
+    <link rel="stylesheet" href="css/all.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'default-red': '#FF4240',
+                        'heading-gray': '#13131899',
+                        'default-gray': '#13131880',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header class="container m-auto">
+        <!-- navbar -->
+        <nav>
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Pages</a></li>
+                            <li><a>Blog</a></li>
+                            <li><a>Contact</a></li>
+                        </ul>
+                    </div>
+                    <a class="text-4xl font-extrabold">Hockey’<span class="text-default-red">s</span></a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Pages</a></li>
+                        <li><a>Blog</a></li>
+                        <li><a>Contact</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 cursor-pointer mr-2 text-red-500"
+                        viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path class="bg-[#89898B]"
+                            d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                    </svg>
+                    <a class="btn bg-default-red text-white bg-default-red text-xl">Get Ticket</a>
+                </div>
+            </div>
+        </nav>
+        <!-- carousel -->
+        <div class="carousel w-full">
+            <div id="slide1" class="carousel-item relative w-full">
+                <img src="images/1.png" class="w-full lg:h-[550px] rounded-2xl" />
+                <div
+                    class="absolute top-1/2 p-3 mx-3 lg:mx-0 lg:p-8 rounded-2xl bg-[#131318] text-white lg:right-8 lg:bottom-8 lg:w-[550px] lg:top-2/3 text-center lg:text-left lg:transform-none">
+                    <h3 class="text-2xl font-extrabold leading-8">Meet all the heroes from the field</h3>
+                    <p class="font-medium leading-6">Dit amet consectetur. Condimentum dignissim adipiscing aliquam
+                        turpis placerat dolor. Purus urna
+                        in sit nullam proin. </p>
+                </div>
+                <div class="absolute flexjustify-start left-8 bottom-8">
+                    <a href="#slide4" class="btn btn-circle bg-[#131318] text-white">❮</a>
+                    <a href="#slide2" class="btn btn-circle bg-[#131318] text-white">❯</a>
+                </div>
+            </div>
+            <div id="slide2" class="carousel-item relative w-full">
+                <img src="images/2.png" class="w-full lg:h-[550px] rounded-2xl" />
+                <div
+                    class="absolute top-1/2 p-3 mx-3 lg:mx-0 lg:p-8 rounded-2xl bg-[#131318] text-white lg:right-8 lg:bottom-8 lg:w-[550px] lg:top-2/3 text-center lg:text-left lg:transform-none">
+                    <h3 class="text-2xl font-extrabold leading-8">Meet all the heroes from the field</h3>
+                    <p class="font-medium leading-6">Dit amet consectetur. Condimentum dignissim adipiscing aliquam
+                        turpis placerat dolor. Purus urna
+                        in sit nullam proin. </p>
+                </div>
+                <div class="absolute flexjustify-start left-8 bottom-8">
+                    <a href="#slide1" class="btn btn-circle bg-[#131318] text-white">❮</a>
+                    <a href="#slide3" class="btn btn-circle bg-[#131318] text-white">❯</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="container m-auto">
+        <!-- Professional Heading -->
+        <div class="border-y border-dashed border-[#13131833] py-12 text-center mt-24 mb-12 text-[#131318]">
+            <h1 class="font-extrabold text-4xl leading-[48px]">Professional Hockeys Club</h1>
+            <p class="leading-6 text-heading-gray lg:w-[600px] m-auto mt-5">Dit amet consectetur. Condimentum dignissim
+                adipiscing aliquam turpis
+                placerat dolor.
+                Purus urna in sit
+                nullam proin. </p>
+        </div>
+        <!-- Professional Body  -->
+        <div class="grid grid-cols-4 gap-5">
+            <div class="text-center text-[#13131899]">
+                <div class="radial-progress text-default-red font-extrabold text-xl" style="--value:60;"
+                    role="progressbar">60%</div>
+                <h3 class="text-xl font-semibold leading-7 my-5">Prayer Facility</h3>
+                <p class="leading-6">Amet consectetur. Condimentum dignissim adipiscing .</p>
+            </div>
+            <div class="text-center text-[#13131899]">
+                <div class="radial-progress text-default-red font-extrabold text-xl" style="--value:60;"
+                    role="progressbar">60%</div>
+                <h3 class="text-xl font-semibold leading-7 my-5">Prayer Facility</h3>
+                <p class="leading-6">Amet consectetur. Condimentum dignissim adipiscing .</p>
+            </div>
+            <div class="text-center text-[#13131899]">
+                <div class="radial-progress text-default-red font-extrabold text-xl" style="--value:60;"
+                    role="progressbar">60%</div>
+                <h3 class="text-xl font-semibold leading-7 my-5">Prayer Facility</h3>
+                <p class="leading-6">Amet consectetur. Condimentum dignissim adipiscing .</p>
+            </div>
+            <div class="text-center text-[#13131899]">
+                <div class="radial-progress text-default-red font-extrabold text-xl" style="--value:60;"
+                    role="progressbar">60%</div>
+                <h3 class="text-xl font-semibold leading-7 my-5">Prayer Facility</h3>
+                <p class="leading-6">Amet consectetur. Condimentum dignissim adipiscing .</p>
+            </div>
+        </div>
+
+        <!-- Program Sections -->
+        <div class="border-y border-dashed border-[#13131833] py-12 text-center mt-24 mb-12 text-[#131318]">
+            <h1 class="font-extrabold text-4xl leading-[48px]">Program Sections</h1>
+            <p class="leading-6 text-heading-gray lg:w-[600px] m-auto mt-5">Dit amet consectetur. Condimentum dignissim
+                adipiscing aliquam turpis placerat dolor.
+                Purus urna in sit
+                nullam proin. </p>
+        </div>
+        <!-- Program Sections Body-->
+        <div class="grid grid-cols-2 gap-5">
+            <div class="relative text-white">
+                <img class="w-full" src="images/2.png" alt="Junior Program">
+                <div
+                    class="absolute top-0 left-0  z-10 bg-default-gray w-full h-full rounded-2xl flex justify-center items-end">
+                    <div class="px-10 pb-10">
+                        <h3 class="text-3xl font-extrabold leading-9">Junior Program</h3>
+                        <p class="my-5 leading-6">Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit
+                            enim sagittis turpis in magna. Id et sed euismod natoque amet nunc morbi nulla. Tortor
+                            congue sed et in.</p>
+                        <a class="btn bg-default-red text-white font-bold bg-default-red text-xl border-none">Register
+                            Now!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="relative text-white">
+                <img class="w-full" src="images/3.png" alt="Teenager Program">
+                <div
+                    class="absolute top-0 left-0  z-10 bg-default-gray w-full h-full rounded-2xl flex justify-center items-end">
+                    <div class="px-10 pb-10">
+                        <h3 class="text-3xl font-extrabold leading-9">Teenager Program</h3>
+                        <p class="my-5 leading-6">Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit
+                            enim sagittis turpis in magna. Id et sed euismod natoque amet nunc morbi nulla. Tortor
+                            congue sed et in.</p>
+                        <a class="btn bg-default-red text-white font-bold bg-default-red text-xl border-none">Register
+                            Now!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="relative h-[450px] text-white lg:col-span-2">
+                <img class="w-full" src="images/4.png" alt="Junior Program">
+                <div
+                    class="absolute top-0 left-0  z-10 bg-default-gray w-full h-full rounded-2xl flex justify-center items-end">
+                    <div class="px-10 pb-10">
+                        <h3 class="text-3xl font-extrabold leading-9">Junior Program</h3>
+                        <p class="my-5 leading-6">Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit
+                            enim sagittis turpis in magna. Id et sed euismod natoque amet nunc morbi nulla. Tortor
+                            congue sed et in.</p>
+                        <a class="btn bg-default-red text-white font-bold bg-default-red text-xl border-none">Register
+                            Now!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- New Products Sections -->
+        <div class="border-y border-dashed border-[#13131833] py-12 text-center mt-24 mb-12 text-[#131318]">
+            <h1 class="font-extrabold text-4xl leading-[48px]">Our New Products</h1>
+            <p class="leading-6 text-heading-gray lg:w-[600px] m-auto mt-5">Dit amet consectetur. Condimentum dignissim
+                adipiscing aliquam turpis
+                placerat dolor.
+                Purus urna in sit
+                nullam proin. </p>
+        </div>
+
+        <!-- Products Sections Body-->
+        <div class="grid grid-cols-2 gap-6">
+            <div class="flex border border-[#1313181A] p-6 rounded-xl gap-5 pr-12">
+                <img src="images/5.png" alt="products">
+                <div>
+                    <div class="flex gap-2 items-center mb-4 font-medium text-default-gray">
+                        <svg class="size-5" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path fill="#F99808"
+                                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+                        </svg>
+                        <span>5.0</span>
+                        <svg class="ml-3 size-5" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path
+                                d="M288 80c-65.2 0-118.8 29.6-159.9 67.7C89.6 183.5 63 226 49.4 256c13.6 30 40.2 72.5 78.6 108.3C169.2 402.4 222.8 432 288 432s118.8-29.6 159.9-67.7C486.4 328.5 513 286 526.6 256c-13.6-30-40.2-72.5-78.6-108.3C406.8 109.6 353.2 80 288 80zM95.4 112.6C142.5 68.8 207.2 32 288 32s145.5 36.8 192.6 80.6c46.8 43.5 78.1 95.4 93 131.1c3.3 7.9 3.3 16.7 0 24.6c-14.9 35.7-46.2 87.7-93 131.1C433.5 443.2 368.8 480 288 480s-145.5-36.8-192.6-80.6C48.6 356 17.3 304 2.5 268.3c-3.3-7.9-3.3-16.7 0-24.6C17.3 208 48.6 156 95.4 112.6zM288 336c44.2 0 80-35.8 80-80s-35.8-80-80-80c-.7 0-1.3 0-2 0c1.3 5.1 2 10.5 2 16c0 35.3-28.7 64-64 64c-5.5 0-10.9-.7-16-2c0 .7 0 1.3 0 2c0 44.2 35.8 80 80 80zm0-208a128 128 0 1 1 0 256 128 128 0 1 1 0-256z" />
+                        </svg>
+                        <span>20</span>
+                        <svg class="ml-3 size-5" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path
+                                d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z" />
+                        </svg>
+                        <span>200</span>
+                    </div>
+                    <h4 class="font-extrabold text-xl leading-7">World Cup Flags Football</h4>
+                    <p class="my-4 text-default-gray leading-6">Dolor sit amet consectetur. Ut urna diam quis sagittis.
+                    </p>
+                    <div class="flex justify-between">
+                        <span class="text-default-red font-extrabold text-[18px]">Price - $22.00</span>
+                        <span class="text-default-gray">Delivery Fee : Free</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex border border-[#1313181A] p-6 rounded-xl gap-5 pr-12">
+                <img src="images/6.png" alt="products">
+                <div>
+                    <div class="flex gap-2 items-center mb-4 font-medium text-default-gray">
+                        <svg class="size-5" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path fill="#F99808"
+                                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+                        </svg>
+                        <span>5.0</span>
+                        <svg class="ml-3 size-5" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path
+                                d="M288 80c-65.2 0-118.8 29.6-159.9 67.7C89.6 183.5 63 226 49.4 256c13.6 30 40.2 72.5 78.6 108.3C169.2 402.4 222.8 432 288 432s118.8-29.6 159.9-67.7C486.4 328.5 513 286 526.6 256c-13.6-30-40.2-72.5-78.6-108.3C406.8 109.6 353.2 80 288 80zM95.4 112.6C142.5 68.8 207.2 32 288 32s145.5 36.8 192.6 80.6c46.8 43.5 78.1 95.4 93 131.1c3.3 7.9 3.3 16.7 0 24.6c-14.9 35.7-46.2 87.7-93 131.1C433.5 443.2 368.8 480 288 480s-145.5-36.8-192.6-80.6C48.6 356 17.3 304 2.5 268.3c-3.3-7.9-3.3-16.7 0-24.6C17.3 208 48.6 156 95.4 112.6zM288 336c44.2 0 80-35.8 80-80s-35.8-80-80-80c-.7 0-1.3 0-2 0c1.3 5.1 2 10.5 2 16c0 35.3-28.7 64-64 64c-5.5 0-10.9-.7-16-2c0 .7 0 1.3 0 2c0 44.2 35.8 80 80 80zm0-208a128 128 0 1 1 0 256 128 128 0 1 1 0-256z" />
+                        </svg>
+                        <span>20</span>
+                        <svg class="ml-3 size-5" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path
+                                d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z" />
+                        </svg>
+                        <span>200</span>
+                    </div>
+                    <h4 class="font-extrabold text-xl leading-7">World Cup Flags Football</h4>
+                    <p class="my-4 text-default-gray leading-6">Dolor sit amet consectetur. Ut urna diam quis sagittis.
+                    </p>
+                    <div class="flex justify-between">
+                        <span class="text-default-red font-extrabold text-[18px]">Price - $22.00</span>
+                        <span class="text-default-gray">Delivery Fee : Free</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex border border-[#1313181A] p-6 rounded-xl gap-5 pr-12">
+                <img src="images/7.png" alt="products">
+                <div>
+                    <div class="flex gap-2 items-center mb-4 font-medium text-default-gray">
+                        <svg class="size-5" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path fill="#F99808"
+                                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+                        </svg>
+                        <span>5.0</span>
+                        <svg class="ml-3 size-5" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path
+                                d="M288 80c-65.2 0-118.8 29.6-159.9 67.7C89.6 183.5 63 226 49.4 256c13.6 30 40.2 72.5 78.6 108.3C169.2 402.4 222.8 432 288 432s118.8-29.6 159.9-67.7C486.4 328.5 513 286 526.6 256c-13.6-30-40.2-72.5-78.6-108.3C406.8 109.6 353.2 80 288 80zM95.4 112.6C142.5 68.8 207.2 32 288 32s145.5 36.8 192.6 80.6c46.8 43.5 78.1 95.4 93 131.1c3.3 7.9 3.3 16.7 0 24.6c-14.9 35.7-46.2 87.7-93 131.1C433.5 443.2 368.8 480 288 480s-145.5-36.8-192.6-80.6C48.6 356 17.3 304 2.5 268.3c-3.3-7.9-3.3-16.7 0-24.6C17.3 208 48.6 156 95.4 112.6zM288 336c44.2 0 80-35.8 80-80s-35.8-80-80-80c-.7 0-1.3 0-2 0c1.3 5.1 2 10.5 2 16c0 35.3-28.7 64-64 64c-5.5 0-10.9-.7-16-2c0 .7 0 1.3 0 2c0 44.2 35.8 80 80 80zm0-208a128 128 0 1 1 0 256 128 128 0 1 1 0-256z" />
+                        </svg>
+                        <span>20</span>
+                        <svg class="ml-3 size-5" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path
+                                d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z" />
+                        </svg>
+                        <span>200</span>
+                    </div>
+                    <h4 class="font-extrabold text-xl leading-7">World Cup Flags Football</h4>
+                    <p class="my-4 text-default-gray leading-6">Dolor sit amet consectetur. Ut urna diam quis sagittis.
+                    </p>
+                    <div class="flex justify-between">
+                        <span class="text-default-red font-extrabold text-[18px]">Price - $22.00</span>
+                        <span class="text-default-gray">Delivery Fee : Free</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex border border-[#1313181A] p-6 rounded-xl gap-5 pr-12">
+                <img src="images/8.png" alt="products">
+                <div>
+                    <div class="flex gap-2 items-center mb-4 font-medium text-default-gray">
+                        <svg class="size-5" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path fill="#F99808"
+                                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+                        </svg>
+                        <span>5.0</span>
+                        <svg class="ml-3 size-5" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path
+                                d="M288 80c-65.2 0-118.8 29.6-159.9 67.7C89.6 183.5 63 226 49.4 256c13.6 30 40.2 72.5 78.6 108.3C169.2 402.4 222.8 432 288 432s118.8-29.6 159.9-67.7C486.4 328.5 513 286 526.6 256c-13.6-30-40.2-72.5-78.6-108.3C406.8 109.6 353.2 80 288 80zM95.4 112.6C142.5 68.8 207.2 32 288 32s145.5 36.8 192.6 80.6c46.8 43.5 78.1 95.4 93 131.1c3.3 7.9 3.3 16.7 0 24.6c-14.9 35.7-46.2 87.7-93 131.1C433.5 443.2 368.8 480 288 480s-145.5-36.8-192.6-80.6C48.6 356 17.3 304 2.5 268.3c-3.3-7.9-3.3-16.7 0-24.6C17.3 208 48.6 156 95.4 112.6zM288 336c44.2 0 80-35.8 80-80s-35.8-80-80-80c-.7 0-1.3 0-2 0c1.3 5.1 2 10.5 2 16c0 35.3-28.7 64-64 64c-5.5 0-10.9-.7-16-2c0 .7 0 1.3 0 2c0 44.2 35.8 80 80 80zm0-208a128 128 0 1 1 0 256 128 128 0 1 1 0-256z" />
+                        </svg>
+                        <span>20</span>
+                        <svg class="ml-3 size-5" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path
+                                d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z" />
+                        </svg>
+                        <span>200</span>
+                    </div>
+                    <h4 class="font-extrabold text-xl leading-7">World Cup Flags Football</h4>
+                    <p class="my-4 text-default-gray leading-6">Dolor sit amet consectetur. Ut urna diam quis sagittis.
+                    </p>
+                    <div class="flex justify-between">
+                        <span class="text-default-red font-extrabold text-[18px]">Price - $22.00</span>
+                        <span class="text-default-gray">Delivery Fee : Free</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex border border-[#1313181A] p-6 rounded-xl gap-5 pr-12">
+                <img src="images/9.png" alt="products">
+                <div>
+                    <div class="flex gap-2 items-center mb-4 font-medium text-default-gray">
+                        <svg class="size-5" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path fill="#F99808"
+                                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+                        </svg>
+                        <span>5.0</span>
+                        <svg class="ml-3 size-5" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path
+                                d="M288 80c-65.2 0-118.8 29.6-159.9 67.7C89.6 183.5 63 226 49.4 256c13.6 30 40.2 72.5 78.6 108.3C169.2 402.4 222.8 432 288 432s118.8-29.6 159.9-67.7C486.4 328.5 513 286 526.6 256c-13.6-30-40.2-72.5-78.6-108.3C406.8 109.6 353.2 80 288 80zM95.4 112.6C142.5 68.8 207.2 32 288 32s145.5 36.8 192.6 80.6c46.8 43.5 78.1 95.4 93 131.1c3.3 7.9 3.3 16.7 0 24.6c-14.9 35.7-46.2 87.7-93 131.1C433.5 443.2 368.8 480 288 480s-145.5-36.8-192.6-80.6C48.6 356 17.3 304 2.5 268.3c-3.3-7.9-3.3-16.7 0-24.6C17.3 208 48.6 156 95.4 112.6zM288 336c44.2 0 80-35.8 80-80s-35.8-80-80-80c-.7 0-1.3 0-2 0c1.3 5.1 2 10.5 2 16c0 35.3-28.7 64-64 64c-5.5 0-10.9-.7-16-2c0 .7 0 1.3 0 2c0 44.2 35.8 80 80 80zm0-208a128 128 0 1 1 0 256 128 128 0 1 1 0-256z" />
+                        </svg>
+                        <span>20</span>
+                        <svg class="ml-3 size-5" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path
+                                d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z" />
+                        </svg>
+                        <span>200</span>
+                    </div>
+                    <h4 class="font-extrabold text-xl leading-7">World Cup Flags Football</h4>
+                    <p class="my-4 text-default-gray leading-6">Dolor sit amet consectetur. Ut urna diam quis sagittis.
+                    </p>
+                    <div class="flex justify-between">
+                        <span class="text-default-red font-extrabold text-[18px]">Price - $22.00</span>
+                        <span class="text-default-gray">Delivery Fee : Free</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex border border-[#1313181A] p-6 rounded-xl gap-5 pr-12">
+                <img src="images/10.png" alt="products">
+                <div>
+                    <div class="flex gap-2 items-center mb-4 font-medium text-default-gray">
+                        <svg class="size-5" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path fill="#F99808"
+                                d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
+                        </svg>
+                        <span>5.0</span>
+                        <svg class="ml-3 size-5" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path
+                                d="M288 80c-65.2 0-118.8 29.6-159.9 67.7C89.6 183.5 63 226 49.4 256c13.6 30 40.2 72.5 78.6 108.3C169.2 402.4 222.8 432 288 432s118.8-29.6 159.9-67.7C486.4 328.5 513 286 526.6 256c-13.6-30-40.2-72.5-78.6-108.3C406.8 109.6 353.2 80 288 80zM95.4 112.6C142.5 68.8 207.2 32 288 32s145.5 36.8 192.6 80.6c46.8 43.5 78.1 95.4 93 131.1c3.3 7.9 3.3 16.7 0 24.6c-14.9 35.7-46.2 87.7-93 131.1C433.5 443.2 368.8 480 288 480s-145.5-36.8-192.6-80.6C48.6 356 17.3 304 2.5 268.3c-3.3-7.9-3.3-16.7 0-24.6C17.3 208 48.6 156 95.4 112.6zM288 336c44.2 0 80-35.8 80-80s-35.8-80-80-80c-.7 0-1.3 0-2 0c1.3 5.1 2 10.5 2 16c0 35.3-28.7 64-64 64c-5.5 0-10.9-.7-16-2c0 .7 0 1.3 0 2c0 44.2 35.8 80 80 80zm0-208a128 128 0 1 1 0 256 128 128 0 1 1 0-256z" />
+                        </svg>
+                        <span>20</span>
+                        <svg class="ml-3 size-5" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path
+                                d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z" />
+                        </svg>
+                        <span>200</span>
+                    </div>
+                    <h4 class="font-extrabold text-xl leading-7">World Cup Flags Football</h4>
+                    <p class="my-4 text-default-gray leading-6">Dolor sit amet consectetur. Ut urna diam quis sagittis.
+                    </p>
+                    <div class="flex justify-between">
+                        <span class="text-default-red font-extrabold text-[18px]">Price - $22.00</span>
+                        <span class="text-default-gray">Delivery Fee : Free</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Clients Question heading-->
+        <div class="border-y border-dashed border-[#13131833] py-12 text-center mt-24 mb-12 text-[#131318]">
+            <h1 class="font-extrabold text-4xl leading-[48px]">Clients Question</h1>
+            <p class="leading-6 text-heading-gray lg:w-[600px] m-auto mt-5">Dit amet consectetur. Condimentum dignissim
+                adipiscing aliquam turpis
+                placerat dolor.
+                Purus urna in sit
+                nullam proin. </p>
+        </div>
+
+        <!-- Clients Question body-->
+        <div class="flex gap-12 border border-[#1313181A] p-8 rounded-2xl">
+            <div class="lg:w-5/12">
+                <img class="lg:h-[470px] w-full" src="images/11.png" alt="Clients">
+            </div>
+            <div class="lg:w-7/12">
+                <div tabIndex="0" class="collapse collapse-plus collapse-open border-b border-[#1313181A] rounded-none">
+                    <input type="checkbox" />
+                    <div class="collapse-title text-xl font-bold leading-7">
+                        Our Equipment
+                    </div>
+                    <div class="collapse-content">
+                        <p class="font-normal leading-6 text-default-gray">Dolor sit amet consectetur. Ut urna diam quis
+                            sagittis. Elit elit
+                            enim sagittis turpis in
+                            magna.</p>
+                    </div>
+                </div>
+                <div tabIndex="1" class="collapse collapse-plus border-b border-[#1313181A] rounded-none">
+                    <div class="collapse-title text-xl font-bold leading-7">
+                        Hockey Training
+                    </div>
+                    <div class="collapse-content">
+                        <p class="font-normal leading-6 text-default-gray">Dolor sit amet consectetur. Ut urna diam quis
+                            sagittis. Elit elit
+                            enim sagittis turpis in
+                            magna.</p>
+                    </div>
+                </div>
+                <div tabindex="2" class="collapse collapse-plus border-b border-[#1313181A] rounded-none">
+                    <div class="collapse-title text-xl font-bold leading-7">
+                        Private Lessons
+                    </div>
+                    <div class="collapse-content">
+                        <p class="font-normal leading-6 text-default-gray">Dolor sit amet consectetur. Ut urna diam quis
+                            sagittis. Elit elit
+                            enim sagittis turpis in
+                            magna.</p>
+                    </div>
+                </div>
+                <div tabindex="3" class="collapse collapse-plus border-b border-[#1313181A] rounded-none">
+                    <div class="collapse-title text-xl font-bold leading-7">
+                        Ski Touring
+                    </div>
+                    <div class="collapse-content">
+                        <p class="font-normal leading-6 text-default-gray">Dolor sit amet consectetur. Ut urna diam quis
+                            sagittis. Elit elit
+                            enim sagittis turpis in
+                            magna.</p>
+                    </div>
+                </div>
+                <div tabindex="4" class="collapse collapse-plus border-b border-[#1313181A] rounded-none">
+                    <div class="collapse-title text-xl font-bold leading-7">
+                        Booking
+                    </div>
+                    <div class="collapse-content">
+                        <p class="font-normal leading-6 text-default-gray">Dolor sit amet consectetur. Ut urna diam quis
+                            sagittis. Elit elit
+                            enim sagittis turpis in
+                            magna.</p>
+                    </div>
+                </div>
+                <div tabindex="5" class="collapse collapse-plus border-b border-[#1313181A] rounded-none">
+                    <div class="collapse-title text-xl font-bold leading-7">
+                        Pricings
+                    </div>
+                    <div class="collapse-content">
+                        <p class="font-normal leading-6 text-default-gray">Dolor sit amet consectetur. Ut urna diam quis
+                            sagittis. Elit elit
+                            enim sagittis turpis in
+                            magna.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Contact heading-->
+        <div class="border-y border-dashed border-[#13131833] py-12 text-center mt-24 mb-12 text-[#131318]">
+            <h1 class="font-extrabold text-4xl leading-[48px]">Get In Touch</h1>
+            <p class="leading-6 text-heading-gray lg:w-[600px] m-auto mt-5">Dit amet consectetur. Condimentum dignissim
+                adipiscing aliquam turpis
+                placerat dolor.
+                Purus urna in sit
+                nullam proin. </p>
+        </div>
+
+        <!-- social media -->
+        <div class="p-10 mt-12 mb-24 bg-base-200 text-base-content rounded-xl text-center">
+
+            <h2 class="text-2xl leading-8 font-extrabold mb-6">
+                Social Media
+            </h2>
+            <div class="grid grid-flow-col gap-8 items-center justify-center">
+                <a><svg class="size-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        class="fill-current">
+                        <path
+                            d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
+                        </path>
+                    </svg></a>
+                <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="fill-current"
+                        viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path
+                            d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
+                    </svg></a>
+
+                <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="fill-current"
+                        viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path
+                            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                    </svg></a>
+                <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="fill-current"
+                        viewBox="0 0 496 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path
+                            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                    </svg></a>
+
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="footer p-10 bg-neutral text-neutral-content">
+        <nav>
+            <h6 class="footer-title">Services</h6>
+            <a class="link link-hover">Branding</a>
+            <a class="link link-hover">Design</a>
+            <a class="link link-hover">Marketing</a>
+            <a class="link link-hover">Advertisement</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Company</h6>
+            <a class="link link-hover">About us</a>
+            <a class="link link-hover">Contact</a>
+            <a class="link link-hover">Jobs</a>
+            <a class="link link-hover">Press kit</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Legal</h6>
+            <a class="link link-hover">Terms of use</a>
+            <a class="link link-hover">Privacy policy</a>
+            <a class="link link-hover">Cookie policy</a>
+        </nav>
+    </footer>
+</body>
+
+</html>
